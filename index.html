@@ -4,92 +4,117 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Introduction-Jaskaran</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
+    <title>replit</title>
     <style>
         * {
             padding: 0px;
             margin: 0px
         }
 
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            min-height: 100vh;
+
+        }
+
+
         .title {
-            z-index: 1;
             position: fixed;
             top: 0px;
-            width: 100vw;
+            width: 100%;
+            background-color: rgba(128, 128, 128, 0.494);
             color: white;
-            background-color: rgba(0, 0, 139, 0.68);
             padding: 10px;
             text-align: center;
-            font-size: 25px;
-            font-family: cursive;
+            font-family: "Merriweather", serif;
+            font-weight: 700;
+            font-style: italic;
+            font-size: x-large;
             backdrop-filter: blur(5px);
+            z-index: 100;
         }
 
-        body{
-            /* background:linear-gradient(45deg,grey,white); */
-            background-image: url("https://plus.unsplash.com/premium_photo-1674106700826-d7e1310d9834?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-            background-repeat: no-repeat;
+        main {
+
             min-height: 100vh;
-            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .list {
-            
-            background-color: rgba(128, 128, 128, 0.2);
-            position: relative;
-            backdrop-filter: blur(5px);
-            top: 150px;
-            border-radius: 18px;
-            margin: auto;
-            text-align: center;
-            color: white;
-            width: 50vw;
-        }
+        
 
-        li {
-            padding: 10px;
-            list-style: none;
-            border-bottom: 1px solid white;
+        .list ul {
+            background-color: none;
+            font-size: larger;
             font-family:fantasy;
         }
 
-        li:last-child{
+        .list ul li {
+            list-style: none;
+            padding: 10px;
+            width: 80vw;
+            background-color: rgba(122, 57, 166, 0.569);
+            backdrop-filter: blur(5px);
+            transition: all ease-in-out 0.2s;
+            border-bottom: 2px solid lightgrey;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .list ul li:first-child {
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        .list ul li:last-child {
+            border-radius: 0px 0px 10px 10px;
             border-bottom: none;
         }
 
-        li:hover {
-            background-color: darkblue;
-        }
-        
-
-        li:first-child:hover{
-            border-top-left-radius: 18px;
-            border-top-right-radius: 18px;
+        .list ul li:hover {
+            transform: scale(110%);
+            border-radius: 10px;
+            /* background-color: rgba(128, 128, 128, 0.465); */
+            border: none;
+            z-index: 10;
         }
 
-        li:last-child:hover{
-            border-bottom-left-radius: 18px;
-            border-bottom-right-radius: 18px;
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
-        
-
-        footer {
-            position: absolute;
-            width: 100vw;
-            bottom: 10px;
-            font-size: 5px;
+        .foot{
             text-align: center;
-
-        }
-
-        span {
-            color: azure;
-            background-color: grey;
-            padding: 5px;
-            border-radius: 8px;
+            font-size: smaller;
+            color: lightgrey;
             
+            background-color: grey;
+            width: fit-content;
+            margin: auto;
+            border-radius: 5px;
         }
+
+        
+
+        
+        
+        
     </style>
 </head>
 
@@ -104,7 +129,7 @@
             <ul>
                 <li>I'm Jaskaran Singh.</li>
                 <li>I know C, C++ and Python programming languages.</li>
-                <li>Also a little bit of HTML and CSS.</li>
+                <li>Also a little bit of HTML, Javascript and CSS.</li>
             </ul>
         </div>
     </main>
@@ -112,9 +137,9 @@
 
 
     <footer>
-        <span>
-        This webpage was created for testing purposes only.
-        </span>
+        <div class="foot">
+            This webpage was created for testing purposes only.
+        </div>
     </footer>
 
 
