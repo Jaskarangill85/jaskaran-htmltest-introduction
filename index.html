@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
-    <title>Introduction-Jaskaran-Test</title>
+    <title>replit</title>
     <style>
         * {
             padding: 0px;
@@ -53,6 +53,7 @@
             background-color: none;
             font-size: larger;
             font-family:fantasy;
+            /* animation: blurs 3s linear 0s; */
         }
 
         .list ul li {
@@ -60,8 +61,9 @@
             padding: 10px;
             width: 80vw;
             background-color: rgba(122, 57, 166, 0.569);
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(3px);
             transition: all ease-in-out 0.2s;
+            animation: blurs 3s ease 0s;
             border-bottom: 2px solid lightgrey;
             color: white;
             position: relative;
@@ -78,8 +80,8 @@
         }
 
         .list ul li:hover {
-            transform: scale(110%);
-            border-radius: 10px;
+            transform: scale(120%) rotate(5deg);
+            border-radius: 12px;
             background-color: rgba(128, 128, 128, 0.465);
             border: none;
             z-index: 10;
@@ -99,18 +101,30 @@
             }
         }
 
-        .foot{
+        @keyframes blurs {
+            0%{
+                filter: blur(4px);
+                transform: scale(0%);
+                border-radius: 5px;
+                border: 2px transparent;
+            }
+            80%{
+                filter: blur(2px);
+                border-radius: 9px;
+            }
+            100%{
+                filter: none;
+                transform: scale(100%);
+            }
+        }
+
+        span{
+           
+            align-self: flex-end;
             text-align: center;
             font-size: smaller;
             color: lightgrey;
-            
-            background-color: grey;
-            width: fit-content;
-            margin: auto;
-            border-radius: 5px;
         }
-
-        
 
         
         
@@ -130,6 +144,7 @@
                 <li>I'm Jaskaran Singh.</li>
                 <li>I know C, C++ and Python programming languages.</li>
                 <li>Also a little bit of HTML, Javascript and CSS.</li>
+                <li>JOBEN FUCK YOURSELF.</li>
             </ul>
         </div>
     </main>
@@ -137,9 +152,9 @@
 
 
     <footer>
-        <div class="foot">
+        <span>
             This webpage was created for testing purposes only.
-        </div>
+        </span>
     </footer>
 
 
